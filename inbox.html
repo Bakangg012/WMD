@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inbox - Eazys Cars</title>
+    
+    <!-- Redirect if not logged in -->
+    <script>
+        window.onload = function() {
+            if (typeof checkLogin === "function") {
+                checkLogin(); // Redirects users who are not logged in
+            } else {
+                console.error("checkLogin() is not defined.");
+            }
+        };
+    </script>
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="eazys_cars.css">
+    <script src="LogInauth.js" defer></script>
+    <script src="login.js" defer></script>
+    <script src="inbox.js" defer></script>
+</head>
+
+<body>
+
+    <h2>Inbox</h2>
+
+    <button id="inboxButton" onclick="window.location.href='inbox.html'" style="display:none;">Inbox</button>
+
+    <div id="welcomeMessage"></div>
+
+    <h3>Received Messages</h3>
+    <ul id="messageList"></ul>
+
+    <h3>Send a Message</h3>
+    <form onsubmit="return sendMessage(event)">
+        <label for="recipient"><b>To (Username)</b></label>
+        <input type="text" id="recipient" placeholder="Enter recipient username" required>
+
+        <label for="message"><b>Message</b></label>
+        <textarea id="message" placeholder="Enter your message" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+
+    <button onclick="window.location.href='eazys_cars.html'">Back to Home</button>
+
+</body>
+</html>

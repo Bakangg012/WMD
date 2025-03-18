@@ -1,0 +1,26 @@
+body { 
+    background-color: rgb(42, 200, 211);
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 10px;
+}
+Header {
+background-color: rgb(103, 62, 62);
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    Text-align: center;
+    float: ;
+
+}
+nav {
+    background-color: rgba(128, 128, 128, 0.633);
+    padding: 10px;
+    text-align: center;
+    
+}
+nav a {
+    background-color: rgb(33, 108, 131);
+    text-decoration: none;
+    padding: 10px;
+    margin:  5px; 
+}
